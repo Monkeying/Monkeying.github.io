@@ -49,7 +49,7 @@ html {
   }
 }
 .container .row {
-  margin-left: auto;
+  margin-left: 0;
   margin-right: auto;
 }
 @media (max-width: 767px) {
