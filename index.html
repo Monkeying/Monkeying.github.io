@@ -1,831 +1,242 @@
 <!DOCTYPE html>
-
-
-
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="Monkeying&#39;s blog">
+  <meta name="keyword" content="hexo-theme, vuejs">
   
-
-
-<html class="theme-next muse use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      Monkeying&#39;Blog
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/plugins/gitment.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  <script src="/js/qrious.js"></script>
+<script src="/js/gitment.js"></script>
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
 
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="Monkeying&#39;Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Monkeying&#39;Blog">
-<meta property="og:locale" content="zh-Hans">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Monkeying&#39;Blog">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="http://yoursite.com/"/>
-
-
-
-
-
-  <title>Monkeying'Blog</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
   
-
-
-
-
-
-
 
 
 </head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Monkeying'Blog</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-      
-        <p class="site-subtitle"></p>
-      
-  </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
 </div>
 
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Monkeying'Blog</span>
+    </a>
+    <ul class="right-list">
       
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
+        <li class="list-item">
+          
+            <a href="/" class="item-link active">Home</a>
+          
         </li>
       
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
         </li>
       
-
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">Projects</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
       
     </ul>
-  
-
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-  <section id="posts" class="posts-expand">
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/01/基于Hexo搭建github-io个人博客/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Monkeying">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Monkeying'Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/01/基于Hexo搭建github-io个人博客/" itemprop="url">基于Hexo搭建github.io个人博客</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-01T15:25:20+08:00">
-                2018-04-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="小书匠收费"><a href="#小书匠收费" class="headerlink" title="小书匠收费"></a>小书匠收费</h1><h2 id="收费与不收费的区别"><a href="#收费与不收费的区别" class="headerlink" title="收费与不收费的区别"></a>收费与不收费的区别</h2><h3 id="收费"><a href="#收费" class="headerlink" title="收费"></a>收费</h3><h4 id="收费项目"><a href="#收费项目" class="headerlink" title="收费项目"></a>收费项目</h4><ol>
-<li>pdf 定制化导出(pdf封面，水印，加密等)</li>
-<li>支持在线更新，优先使用新功能</li>
-<li>配置数据同步</li>
-<li>自定义数据中心</li>
-<li><img src="./images/20180401165029.png" alt="enter description here" title="20180401165029"></li>
-</ol>
-<h4 id="收费价格"><a href="#收费价格" class="headerlink" title="收费价格"></a>收费价格</h4><ol>
-<li>一年 20￥, 两年 40￥。 目前只支持两年，如果付费超过 40￥,只能算做两年的套餐。</li>
-</ol>
-<h3 id="不收费"><a href="#不收费" class="headerlink" title="不收费"></a>不收费</h3><ol>
-<li>免费又实用的功能太多了，不知道重点写什么好，自己到 <a href="http://soft.xiaoshujiang.com/feature.html" target="_blank" rel="noopener">http://soft.xiaoshujiang.com/feature.html</a> 这里看吧…..</li>
-</ol>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p><a href="http://soft.xiaoshujiang.com/price.html" target="_blank" rel="noopener">http://soft.xiaoshujiang.com/price.html</a></p>
-<hr>
-<h1 id="升级日志"><a href="#升级日志" class="headerlink" title="升级日志"></a>升级日志</h1><h2 id="注"><a href="#注" class="headerlink" title="注"></a>注</h2><p>新版本升级了底层 nwjs 平台，内置数据库不与老版本兼容，建议在升级前进行数据导出备份，或者数据库文件备份，防止升级失败。</p>
-<p>数据库文件路径</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Windows: %LOCALAPPDATA%/storywriter/</span><br><span class="line">Mac: ~/Library/Application Support/storywriter/</span><br><span class="line">Linux: ~/.config/storywriter</span><br></pre></td></tr></table></figure>
-<h2 id="5-1-0"><a href="#5-1-0" class="headerlink" title="5.1.0"></a>5.1.0</h2><h3 id="5-1-0-新功能"><a href="#5-1-0-新功能" class="headerlink" title="5.1.0 新功能"></a>5.1.0 新功能</h3><ol>
-<li>用户配置参数同步可以进行范围控制</li>
-<li>查看预览后的字符数统计信息</li>
-</ol>
-<h3 id="5-1-0-修改"><a href="#5-1-0-修改" class="headerlink" title="5.1.0 修改"></a>5.1.0 修改</h3><ol>
-<li>修正附件管理不能正确查看图片</li>
-<li>如果编辑器行高设置为空，系统将自动调整行高</li>
-<li>进入管理界面后 esc 快捷键控制顺序 #638</li>
-<li>解决绑定设置同步时，第三方绑定里如果是在其他客户端/浏览器不支持时，进行提示</li>
-<li>解决 firefox 下视图初始化与 chrome 不一致的 bug</li>
-<li>历史记录页面调整</li>
-<li>如果用户上次没有启动成功，系统尝试新建一篇文章</li>
-<li>重构设置页面，调整模板，预览标签内容项</li>
-<li>修复从第三方绑定导入文件不能正常解析附件的 bug</li>
-<li>修复导入 zip 不能正常解析附件资源 bug</li>
-</ol>
-<h2 id="5-0-0"><a href="#5-0-0" class="headerlink" title="5.0.0"></a>5.0.0</h2><h3 id="5-0-0-新功能"><a href="#5-0-0-新功能" class="headerlink" title="5.0.0 新功能"></a>5.0.0 新功能</h3><ol>
-<li>配置参数同步功能(仅限会员,需要用户登录后，在用户管理界面上手动打开)</li>
-<li>自定义数据中心(仅限会员,需要用户登录后，在<code>小书匠主按钮&gt;数据&gt;同步</code> 上操作 )</li>
-</ol>
-<h3 id="4-0-0-到-4-2-1-之间提供的新功能"><a href="#4-0-0-到-4-2-1-之间提供的新功能" class="headerlink" title="4.0.0 到 4.2.1 之间提供的新功能"></a>4.0.0 到 4.2.1 之间提供的新功能</h3><ol>
-<li>会员用户可以自定义 pdf 导出里目录样式 <a href="https://github.com/suziwen/blogxiaoshujiang/blob/master/2017-9-24%20%E5%B0%8F%E4%B9%A6%E5%8C%A0%20pdf%20%E5%AF%BC%E5%87%BA%E8%87%AA%E5%AE%9A%E4%B9%89%20css%20%E6%95%99%E7%A8%8B.md" target="_blank" rel="noopener">查看教程</a></li>
-<li>添加 xsjimg 语法支持（<a href="https://github.com/suziwen/blogxiaoshujiang/blob/master/2017-9-15%20%E5%B0%8F%E4%B9%A6%E5%8C%A0%20xsjimg%20%E8%AF%AD%E6%B3%95%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.md" target="_blank" rel="noopener">使用说明</a>）</li>
-</ol>
-<h3 id="5-0-0-修改"><a href="#5-0-0-修改" class="headerlink" title="5.0.0 修改"></a>5.0.0 修改</h3><ol>
-<li>修复 mac 客户端本地 pdf 打印失败问题 #556</li>
-<li>升级底层 nwjs 平台到 26.5 版本</li>
-<li>修复计算附件大小错误的问题</li>
-<li>升级 underscore 到 1.8.3 版本</li>
-<li>本地客户端用wavedrom功能直接卡死 #587</li>
-<li>创建新文章后，快速切换文件后，不能正常保存的问题</li>
-<li>codemirror 编辑器内代码块字体改成等宽字体</li>
-<li>申请会员中的用户也可以查看到付款通道</li>
-<li>调整空白符和 tab符替换顺序 #600</li>
-<li>切换 xmlrpc 组件，解决 wordpress 重定向不能正常解析的 bug #530</li>
-<li>客户端调整印象笔记认证入口</li>
-<li>调整绑定页面对齐样式</li>
-<li>设置页面切换标签页无法提交数据 #583</li>
-<li>重新开放有道云笔记（但不提供完整的语法兼容性，也不支持从有道云抓取文件策略）</li>
-<li>重构标题快捷键操作代码， Codemirror快捷键插入标题后不会自动选择 #585</li>
-<li>升级 dropbox v2 api</li>
-<li>解决 pdf 打印带行号代码块在分页打印时排版重叠问题</li>
-<li>数据库导出选择导出全部功能失效的 bug</li>
-<li>跨域资源的抓取策略调整，先本地，如果出现错误，再尝试通过服务器中转抓取</li>
-<li>升级底层数据库 pouchdb 到 6.3.4</li>
-<li>修改 codemirror 编辑器高亮颜色选择器触发条件，高亮语法开头结尾都要非空白字符</li>
-</ol>
-<h3 id="4-0-0-到-4-2-1-之间的修改"><a href="#4-0-0-到-4-2-1-之间的修改" class="headerlink" title="4.0.0 到 4.2.1 之间的修改"></a>4.0.0 到 4.2.1 之间的修改</h3><h4 id="4-1-0"><a href="#4-1-0" class="headerlink" title="4.1.0"></a>4.1.0</h4><ol>
-<li>修正在较小窗口时，工具栏按钮提示名称被显示出来,太占用空间的问题</li>
-<li>修复 window 版本关联打开失败的问题 #526</li>
-<li>插入图片按钮支持 svg 格式图片 （svg 格式图片在印象笔记里会被当成附件处理）</li>
-<li>允许用户显示查看已经绑定印象(Evernote)笔记的 token</li>
-</ol>
-<h4 id="4-2-0"><a href="#4-2-0" class="headerlink" title="4.2.0"></a>4.2.0</h4><ol>
-<li>解决快捷键保存，退出水印预览模式不生效问题 #536 #476</li>
-<li>ace 默认行高调整到 1.4</li>
-<li>解决 codemirror vim 模式下快捷键冲突问题 #534 #454</li>
-<li>客户端托盘图标消失问题 #537</li>
-<li>不再使用 cledit 编辑器</li>
-<li>调整预览区资源动态加载</li>
-<li>预览内的链接跳转会引起界面错位 #541</li>
-<li>codemirror 编辑器（开启英文检查）总是提示 加载词典超时 #545</li>
-<li>升级 codemirror 编辑器到 5.30.0</li>
-<li>pdf 封面换行算法修改为 <code>break-word</code></li>
-<li>codemirror 文本高亮颜色选择器在代码块显示的问题 #549</li>
-</ol>
-<h4 id="4-2-1"><a href="#4-2-1" class="headerlink" title="4.2.1"></a>4.2.1</h4><ol>
-<li>修复码云认证入口无法正常认证问题</li>
-</ol>
-
-          
-        
-      
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/01/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Monkeying">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Monkeying'Blog">
-    </span>
-
-    
-      <header class="post-header">
-
+    <div class="menu-mask">
+      <ul class="menu-list">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/01/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <li class="menu-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-01T15:12:01+08:00">
-                2018-04-01
-              </time>
+              <a href="/" class="menu-link mobile-active">Home</a>
             
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
+          </li>
         
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
         
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-
-
-          </div>
-          
-
-
-          
-
-        </div>
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
         
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">Projects</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
     </div>
   </div>
+</header>
 
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
+    <main class="app-body">
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2018/04/01/基于Hexo搭建github-io个人博客/">基于Hexo搭建github.io个人博客</a>
+      </h2>
+      <p class="article-date">April 1, 2018</p>
+      
+        
+  <a href="/tags#small-diversions" >
+    <span class="tag-code">small-diversions</span>
+  </a>
 
       
-
-      
-
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">Monkeying</p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
-
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">标签</span>
-                
-              </div>
-            
-
-          </nav>
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
+      <div class="article-summary">
+        
+          小书匠收费收费与不收费的区别收费收费项目
+pdf 定制化导出(pdf封面，水印，加密等)
+支持在线更新，优先使用新功能
+配置数据同步
+自定义数据中心
 
 
+收费价格
+一年 20￥, 两年 40￥。 目前只支持两年，如果付费超过 40￥,只能算做两年的套餐。
+
+不收费
+免费又实用的功能太多了，不 ...
         
       </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Monkeying</span>
+      <a class="more" href="/2018/04/01/基于Hexo搭建github-io个人博客/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2018/04/01/hello-world/">Hello World</a>
+      </h2>
+      <p class="article-date">April 1, 2018</p>
+      
+      <div class="article-summary">
+        
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer ...
+        
+      </div>
+      <a class="more" href="/2018/04/01/hello-world/">Read more</a>
+    </article>
+  
 
   
+</main>
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
 </div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2018 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
+</footer>
 
-
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
-
-
-
-
-        
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
-  </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
   }
 </script>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
-</body>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+  </body>
 </html>
